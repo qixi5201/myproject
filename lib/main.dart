@@ -4,20 +4,29 @@ import 'package:flutter/material.dart';
 
 void main() {
   var appTitle= Text('我的第一個Flutter App'),
-      hiFlutter= Text('Hi,Flutter.',
-          style: TextStyle(fontSize: 50),
+      hiFlutter= Text('Hi,Flutter.\n今天是20220308',
+          style: TextStyle(fontSize: 30,
+              color: Colors.black87,
+              fontWeight:FontWeight.bold,
+              decoration: TextDecoration.lineThrough),
+  );
+  var img=Image.network("https://i.epochtimes.com/assets/uploads/2020/05/shutterstock_344179946-600x400.jpg");
+
+
+  var appBody=Center(//child: hiFlutter,
+    child: img,
   );
 
-  var appBody=Center(child: hiFlutter,
-  );
-
-  var appBar=AppBar(title: appTitle,
+  var appBar=AppBar(
+    title: appTitle,
+    backgroundColor: Colors.purple,
   );
 
   var app=MaterialApp(
     home: Scaffold(
       appBar: appBar,
       body: appBody,
+        backgroundColor: Colors.cyan
     ),
   );
   runApp(app);
