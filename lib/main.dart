@@ -4,18 +4,36 @@ import 'package:flutter/material.dart';
 
 void main() {
   var appTitle= Text('我的第一個Flutter App'),
-      hiFlutter= Text('Hi,Flutter.\n今天是20220308',
+      hiFlutter= Text('Hi,Flutter.\n今天是20220314',
           style: TextStyle(fontSize: 30,
               color: Colors.black87,
               fontWeight:FontWeight.bold,
-              decoration: TextDecoration.lineThrough),
+              decoration: TextDecoration.underline),
   );
   var img=Image.network("https://i.epochtimes.com/assets/uploads/2020/05/shutterstock_344179946-600x400.jpg");
 
 
-  var appBody=Center(//child: hiFlutter,
-    child: img,
+  //var appBody=Center(
+    //child: Container(
+      //margin: const EdgeInsets.all(10.0),
+      //color: Colors.red,
+      //width: 100.0,
+      //height: 100.0,
+    //),
+    //child: hiFlutter,
+    //heightFactor: 2,
+    //widthFactor: 1.5,
+    //child: img,
+ // );
+
+  var appBody=Container(
+    child: hiFlutter,
+    alignment: Alignment.topCenter,
+    margin: EdgeInsets.all(50),
+    color: Colors.white,
+    padding: EdgeInsets.fromLTRB(30, 30, 30, 30)
   );
+
 
   var appBar=AppBar(
     title: appTitle,
