@@ -1,5 +1,6 @@
 
 
+
 import 'package:flutter/material.dart';
 
 void main() {
@@ -11,6 +12,7 @@ void main() {
               decoration: TextDecoration.underline),
   );
   var img=Image.network("https://i.epochtimes.com/assets/uploads/2020/05/shutterstock_344179946-600x400.jpg");
+
 
 
   //var appBody=Center(
@@ -26,14 +28,49 @@ void main() {
     //child: img,
  // );
 
-  var appBody=Container(
-    child: hiFlutter,
-    alignment: Alignment.topCenter,
-    margin: EdgeInsets.all(50),
-    color: Colors.white,
-    padding: EdgeInsets.fromLTRB(30, 30, 30, 30)
-  );
+  //var appBody=Container(
+    //child: hiFlutter,
+    //alignment: Alignment.topCenter,
+    //margin: EdgeInsets.all(50),
+    //color: Colors.white,
+    //padding: EdgeInsets.fromLTRB(30, 30, 30, 30)
+  //);
+  //var appBody=Row(
+    //children: const <Widget>[
+      //Expanded(
+      //  child: Text('第一行文字'),
+     // ),
+      //Expanded(
+       //child: Text('第二行文字'),
+      //),
+      //Expanded(
+        //child: FittedBox(
+          //fit: BoxFit.contain, // otherwise the logo will be tiny
+          //child: FlutterLogo(),
+        //),
+      //),
+    //],
+  //);
+  //var appBody=Container(
+      //child: hiFlutter,
+      //alignment: Alignment.topCenter,
+      //margin: EdgeInsets.all(50),
+      //color: Colors.white,
+      //padding: EdgeInsets.fromLTRB(30, 30, 30, 30)
+  //);
 
+  var appBody=Column(
+      children: const <Widget>[
+        Text('第一行文字'),
+        Text('第二行文字'),
+    Expanded(
+    child: FittedBox(
+    fit: BoxFit.contain, // otherwise the logo will be tiny
+    child: FlutterLogo(),
+    ),
+    ),
+  ],
+  );
 
   var appBar=AppBar(
     title: appTitle,
